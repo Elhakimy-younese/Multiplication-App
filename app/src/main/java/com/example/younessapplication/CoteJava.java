@@ -33,6 +33,6 @@ public class CoteJava extends AppCompatActivity {
                 System.exit(0);
             }
         });
-        
+
     }
 }
