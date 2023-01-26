@@ -8,9 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class CoteJava extends AppCompatActivity {
-    Button btnre,btnqtt;
+    Button btnre,btnqtt,btnaff;
     EditText Number;
     TextView tv;
 
@@ -24,6 +25,7 @@ public class CoteJava extends AppCompatActivity {
         setContentView(R.layout.cote_xml);
         btnre=findViewById(R.id.btn_reinitialiser);
         btnqtt=findViewById(R.id.btn_quitter);
+        btnaff=findViewById(R.id.btn_afficher);
         Number=findViewById(R.id.TextNum);
         c1=findViewById(R.id.btn_c1);
         c2=findViewById(R.id.btn_c2);
@@ -45,6 +47,37 @@ public class CoteJava extends AppCompatActivity {
                 finish();
                 System.exit(0);
             }
+        });
+
+        Toast t;
+        t= Toast.makeText(CoteJava.this,"veuillez saisir un entier !!",Toast.LENGTH_SHORT);
+
+        btnaff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+
+
+                    int N = Integer.parseInt(Number.getText().toString());
+                    String show="";
+                    for (int i=1;i<=10;i++) {
+                        int rslt= N*i;
+                        show+=String.format(" %d*%d=%d \n",N,i,rslt);
+                        rslt=0;
+
+                    }
+                    tv.setText(show);
+
+
+
+                }catch (NumberFormatException e){
+                    btnre.callOnClick();
+
+                    t.show();
+                }
+
+            }
+
         });
 
         c1.setOnClickListener(new View.OnClickListener() {
