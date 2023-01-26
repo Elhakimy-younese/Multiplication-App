@@ -45,11 +45,12 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_reinitialiser" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtv"
         android:layout_width="305dp"
         android:layout_height="310dp"
         android:text="\ ? * 1 =\?\n \? * 2 =\?\n \? * 3 =\?\n \? * 4 =\?\n \? * 5 =\?\n \? * 6 =\?\n \? * 7 =\?\n \? * 8 =\?\n \? * 9 =\?\n \? * 10 =\?"
         android:textSize="60px"
+        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/btn_quitter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
