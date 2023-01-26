@@ -16,7 +16,6 @@ public class CoteJava extends AppCompatActivity {
 
     Button c1,c2,c3;
 
-    TextView tv;
 
 
     @Override
@@ -26,17 +25,12 @@ public class CoteJava extends AppCompatActivity {
         btnre=findViewById(R.id.btn_reinitialiser);
         btnqtt=findViewById(R.id.btn_quitter);
         Number=findViewById(R.id.TextNum);
-<<<<<<< HEAD
         c1=findViewById(R.id.btn_c1);
         c2=findViewById(R.id.btn_c2);
         c3=findViewById(R.id.btn_c3);
 
         tv=findViewById(R.id.txtv);
-
-=======
-        tv=findViewById(R.id.txtv);
->>>>>>> master
-
+        
         btnre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
